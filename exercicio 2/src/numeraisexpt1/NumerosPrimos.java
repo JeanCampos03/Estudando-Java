@@ -1,4 +1,4 @@
-package numerais;
+package numeraisexpt1;
 
 public class NumerosPrimos {
     public boolean verificarPrimalidade(int numero) {

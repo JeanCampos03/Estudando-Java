@@ -1,4 +1,4 @@
-package animais;
+package animaisexpt1;
 
 // 2. Crie uma classe Animal com um metodo emitirSom(). Em seguida, crie duas subclasses:
 //Cachorro e Gato, que herdam da classe Animal. Adicione o metodo emitirSom() nas subclasses,

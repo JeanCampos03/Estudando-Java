@@ -1,4 +1,4 @@
-package conversormoeda;
+package conversormoedaexpt1;
 
 public class ConversorMoeda implements ConversorFinanceira{
 

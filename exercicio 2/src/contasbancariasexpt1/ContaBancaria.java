@@ -1,4 +1,4 @@
-package contasbancarias;
+package contasbancariasexpt1;
 
 public class ContaBancaria {
     protected float saldoConta;

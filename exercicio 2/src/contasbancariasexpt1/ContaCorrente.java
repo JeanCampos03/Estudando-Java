@@ -1,4 +1,4 @@
-package contasbancarias;
+package contasbancariasexpt1;
 
 public class ContaCorrente extends ContaBancaria{
     private float tarifaMensal;

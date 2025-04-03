@@ -1,4 +1,4 @@
-package numerais;
+package numeraisexpt1;
 
 public class GeradorPrimo extends NumerosPrimos {
     public int gerarProximoPrimo(int ultimoPrimoConhecido) {
