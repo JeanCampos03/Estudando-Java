@@ -15,15 +15,15 @@ public class Principal {
 
 
 
-            Filme meuFilme = new Filme();
-        meuFilme.setNome("The Matrix");
+            Filme meuFilme = new Filme("The Matrix");
+//old   meuFilme.setNome("The Matrix");
         meuFilme.setAnoDeLancamento(1999);
         meuFilme.setDuracaoEmMinutos(135);
         meuFilme.setIncluidoNoPlano(true);
         meuFilme.exibeFichaTecnica();
 
-            Filme outroFilme = new Filme();
-        outroFilme.setNome("John Wick");
+            Filme outroFilme = new Filme("John Wick");
+//old   outroFilme.setNome("John Wick");
         outroFilme.setAnoDeLancamento(2014);
         outroFilme.setDuracaoEmMinutos(101);
         outroFilme.setIncluidoNoPlano(true);
@@ -57,9 +57,9 @@ public class Principal {
         filtroUm.filtra(episodioUm);
 
         //var é uma variável que faz uma inferencia do tipo declarado
-        var filmeDoPaulo = new Filme();
+        var filmeDoPaulo = new Filme("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setNome("Dogville");
+//old   filmeDoPaulo.setNome();
         filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
@@ -73,7 +73,7 @@ public class Principal {
         System.out.println("Nome do primeiro filme na lista: " + listaDeFilmes.get(0).getNome());
         System.out.println("Nome do primeiro filme na lista: " + listaDeFilmes.get(1).getNome());
 
-        System.out.println("toString do filme: " + listaDeFilmes);
+        System.out.println("toString de todos os filmes da lista: " + listaDeFilmes);
         System.out.println("toString do filme: " + listaDeFilmes.get(0).toString());
 
 
