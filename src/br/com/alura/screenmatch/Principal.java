@@ -7,25 +7,27 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
+import java.util.ArrayList;
+
 
 public class Principal {
-    public static void main (String args[]) {
+    public static void main (String[] args) {
 
 
 
-            Filme favorito = new Filme();
-        favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
-        favorito.setDuracaoEmMinutos(135);
-        favorito.setIncluidoNoPlano(true);
-        favorito.exibeFichaTecnica();
+            Filme meuFilme = new Filme();
+        meuFilme.setNome("The Matrix");
+        meuFilme.setAnoDeLancamento(1999);
+        meuFilme.setDuracaoEmMinutos(135);
+        meuFilme.setIncluidoNoPlano(true);
+        meuFilme.exibeFichaTecnica();
 
-            Filme outro = new Filme();
-        outro.setNome("John Wick");
-        outro.setAnoDeLancamento(2014);
-        outro.setDuracaoEmMinutos(101);
-        outro.setIncluidoNoPlano(true);
-        outro.exibeFichaTecnica();
+            Filme outroFilme = new Filme();
+        outroFilme.setNome("John Wick");
+        outroFilme.setAnoDeLancamento(2014);
+        outroFilme.setDuracaoEmMinutos(101);
+        outroFilme.setIncluidoNoPlano(true);
+        outroFilme.exibeFichaTecnica();
 
 
             Serie serieUm = new Serie();
@@ -39,20 +41,44 @@ public class Principal {
         serieUm.exibeFichaTecnica();
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
-        calculadora.inclui(favorito);
-        calculadora.inclui(outro);
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
         calculadora.inclui(serieUm);
 
         System.out.println("Tempo total: " +calculadora.getTempoTotal());
 
         FiltroRecomendacao filtroUm = new FiltroRecomendacao();
-        filtroUm.filtra(favorito);
+        filtroUm.filtra(meuFilme);
 
         Episodio episodioUm = new Episodio();
         episodioUm.setNumero(1);
         episodioUm.setSerie(serieUm);
         episodioUm.setTotalVisualizacoes(300);
         filtroUm.filtra(episodioUm);
+
+        //var é uma variável que faz uma inferencia do tipo declarado
+        var filmeDoPaulo = new Filme();
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setNome("Dogville");
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+
+        //size exibe quantos elementos foram adicionados
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Nome do primeiro filme na lista: " + listaDeFilmes.get(0).getNome());
+        System.out.println("Nome do primeiro filme na lista: " + listaDeFilmes.get(1).getNome());
+
+        System.out.println("toString do filme: " + listaDeFilmes);
+        System.out.println("toString do filme: " + listaDeFilmes.get(0).toString());
+
+
+
+
 
 }
 }
