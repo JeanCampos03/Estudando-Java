@@ -1,11 +1,10 @@
-package br.com.alura.screenmatch;
+package br.com.alura.screenmatch.Principal;
 
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
-import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 
@@ -15,24 +14,24 @@ public class Principal {
 
 
 
-            Filme meuFilme = new Filme("The Matrix");
+            Filme meuFilme = new Filme("The Matrix", 1999);
 //old   meuFilme.setNome("The Matrix");
-        meuFilme.setAnoDeLancamento(1999);
+//old   meuFilme.setAnoDeLancamento(1999);
         meuFilme.setDuracaoEmMinutos(135);
         meuFilme.setIncluidoNoPlano(true);
         meuFilme.exibeFichaTecnica();
 
-            Filme outroFilme = new Filme("John Wick");
+            Filme outroFilme = new Filme("John Wick",2014);
 //old   outroFilme.setNome("John Wick");
-        outroFilme.setAnoDeLancamento(2014);
+//old   outroFilme.setAnoDeLancamento(2014);
         outroFilme.setDuracaoEmMinutos(101);
         outroFilme.setIncluidoNoPlano(true);
         outroFilme.exibeFichaTecnica();
 
 
-            Serie serieUm = new Serie();
-        serieUm.setNome("La Casa de Papel");
-        serieUm.setAnoDeLancamento(2017);
+            Serie serieUm = new Serie("La Casa de Papel", 2017);
+//old   serieUm.setNome("La Casa de Papel");
+//old   serieUm.setAnoDeLancamento(2017);
         serieUm.setIncluidoNoPlano(true);
         serieUm.setAtiva(true);
         serieUm.setTemporadas(5);
@@ -57,10 +56,10 @@ public class Principal {
         filtroUm.filtra(episodioUm);
 
         //var é uma variável que faz uma inferencia do tipo declarado
-        var filmeDoPaulo = new Filme("Dogville");
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
 //old   filmeDoPaulo.setNome();
-        filmeDoPaulo.setAnoDeLancamento(2003);
+//old   filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
